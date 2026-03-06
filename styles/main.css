@@ -1,0 +1,117 @@
+/* ============================================================
+   BALAMCHE PARK – Custom Stylesheet
+   All custom CSS previously inside index.html <style> block.
+   Tailwind utility classes remain in the HTML markup.
+   ============================================================ */
+
+
+/* ─── Global base ──────────────────────────────────────────────────────── */
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* ─── Hero section: parallax-style background ─────────────────────────── */
+
+.hero-bg {
+  background-image:
+    linear-gradient(to bottom, rgba(31, 77, 43, 0.65) 0%, rgba(26, 26, 26, 0.55) 100%),
+    url('https://images.pexels.com/photos/2432208/pexels-photo-2432208.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+/* ─── Card hover: smooth lift on mouse-over ───────────────────────────── */
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(31, 77, 43, 0.18);
+}
+
+
+/* ─── Scroll-reveal animation ─────────────────────────────────────────── */
+/* Elements start hidden and slide up; JavaScript adds .visible when
+   they enter the viewport via IntersectionObserver.                      */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+/* ─── Gallery image: zoom on hover ────────────────────────────────────── */
+
+.gallery-img {
+  overflow: hidden;
+}
+
+.gallery-img img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-img:hover img {
+  transform: scale(1.08);
+}
+
+
+/* ─── Step connector: horizontal line between journey steps (desktop) ── */
+
+@media (min-width: 768px) {
+  .step-connector::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #4caf50, #1f4d2b);
+  }
+
+  .step-connector:last-child::after {
+    display: none;
+  }
+}
+
+
+/* ─── Navbar: smooth transition on background change (triggered by JS) ── */
+
+#navbar {
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* ─── WhatsApp button: pulsing glow animation ─────────────────────────── */
+
+.wa-pulse {
+  animation: waPulse 2s infinite;
+}
+
+@keyframes waPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+}
+
+
+/* ─── Pricing: popular card highlight glow ────────────────────────────── */
+
+.popular-card {
+  box-shadow: 0 0 0 3px #4caf50, 0 20px 50px rgba(76, 175, 80, 0.25);
+}

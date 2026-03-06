@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balamche Park – Aventura en la Selva Maya</title>
+  <meta name="description" content="Vive la aventura en la selva maya en Balamche Park. Cuatrimotos, tirolesas, cenotes, ritual maya y más en una experiencia de 3.5 horas en la Península de Yucatán." />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter + Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./styles/main.css" />
+
+  <script>
+    /* ─── Tailwind custom config ────────────────────────────────────────── */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest:  '#1f4d2b',
+            leaf:    '#4CAF50',
+            sand:    '#f3e9d2',
+            dark:    '#1a1a1a',
+          },
+          fontFamily: {
+            sans:    ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+</head>
+
+<body class="bg-white text-dark antialiased">
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-2 group">
+        <span class="text-2xl">🌿</span>
+        <span class="font-display text-xl font-bold text-white group-hover:text-sand transition-colors">
+          Balamche<span class="text-leaf">Park</span>
+        </span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="hidden md:flex items-center gap-8 text-white/90 text-sm font-medium">
+        <li><a href="#activities" class="hover:text-leaf transition-colors">Actividades</a></li>
+        <li><a href="#experience" class="hover:text-leaf transition-colors">Experiencia</a></li>
+        <li><a href="#gallery" class="hover:text-leaf transition-colors">Galería</a></li>
+        <li><a href="#packages" class="hover:text-leaf transition-colors">Paquetes</a></li>
+        <li><a href="#testimonials" class="hover:text-leaf transition-colors">Reseñas</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <a href="#pricing"
+         class="hidden md:inline-flex items-center gap-2 bg-leaf text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-forest transition-colors shadow-lg">
+        Reservar ahora
+      </a>
+
+      <!-- Mobile menu toggle -->
+      <button id="menu-toggle" aria-label="Toggle menu"
+              class="md:hidden text-white focus:outline-none">
+        <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu"
+         class="hidden md:hidden mt-4 mx-0 bg-forest/95 backdrop-blur-sm rounded-2xl px-6 py-5 flex-col gap-4">
+      <a href="#activities" class="block text-white/90 font-medium hover:text-leaf py-1 transition-colors">Actividades</a>
+      <a href="#experience" class="block text-white/90 font-medium hover:text-leaf py-1 transition-colors">Experiencia</a>
+      <a href="#gallery"    class="block text-white/90 font-medium hover:text-leaf py-1 transition-colors">Galería</a>
+      <a href="#packages"   class="block text-white/90 font-medium hover:text-leaf py-1 transition-colors">Paquetes</a>
+      <a href="#testimonials" class="block text-white/90 font-medium hover:text-leaf py-1 transition-colors">Reseñas</a>
+      <a href="#pricing"
+         class="inline-flex justify-center items-center bg-leaf text-white font-semibold px-5 py-3 rounded-full hover:bg-green-700 transition-colors mt-2">
+        Reservar ahora
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       1 · HERO SECTION
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-center px-6 pt-20">
+    <div class="max-w-4xl mx-auto">
+
+      <!-- Badge -->
+      <span class="inline-block bg-leaf/20 border border-leaf/40 text-leaf text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
+        🌴 Selva Maya · Península de Yucatán
+      </span>
+
+      <!-- Headline -->
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+        Vive la aventura<br/>
+        <span class="text-leaf">en la selva maya</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        Explora la selva conduciendo cuatrimotos, vuela en tirolesas, descubre cenotes y conecta con la cultura maya en una experiencia inolvidable
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#pricing"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-leaf text-white font-bold text-base px-8 py-4 rounded-full hover:bg-green-600 transition-all shadow-xl hover:shadow-leaf/30 hover:-translate-y-1">
+          🎯 Reservar ahora
+        </a>
+        <a href="https://wa.me/529871073493?text=¡Hola!%20Me%20gustaría%20reservar%20una%20aventura%20en%20Balamche%20Park"
+           target="_blank" rel="noopener"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 border-2 border-white/40 backdrop-blur-sm text-white font-bold text-base px-8 py-4 rounded-full hover:bg-white/20 transition-all wa-pulse">
+          <svg class="w-5 h-5 fill-current text-green-400" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Contactar por WhatsApp
+        </a>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="mt-16 animate-bounce">
+        <svg class="w-6 h-6 text-white/50 mx-auto" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       STATS STRIP
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <div class="bg-forest text-white py-8 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <p class="text-3xl font-bold text-leaf">3.5h</p>
+        <p class="text-sm text-white/70 mt-1">Duración del tour</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold text-leaf">7+</p>
+        <p class="text-sm text-white/70 mt-1">Actividades incluidas</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold text-leaf">5k+</p>
+        <p class="text-sm text-white/70 mt-1">Aventureros felices</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold text-leaf">4.9 ⭐</p>
+        <p class="text-sm text-white/70 mt-1">Calificación promedio</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       2 · FEATURES SECTION  (4 highlight cards)
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <section id="features" class="bg-sand py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Heading -->
+      <div class="text-center mb-14 reveal">
+        <span class="text-leaf text-sm font-semibold tracking-widest uppercase">Lo que te espera</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-forest mt-3">
+          Experiencias únicas
+        </h2>
+        <p class="text-dark/60 mt-4 max-w-xl mx-auto">
+          Cada visita a Balamche Park combina tres aventuras legendarias en un solo recorrido inolvidable.
+        </p>
+      </div>
+
+      <!-- Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1 — ATV -->
+        <div class="bg-white rounded-3xl overflow-hidden card-hover shadow-md reveal flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.pexels.com/photos/5803148/pexels-photo-5803148.jpeg"
+                 alt="Recorrido en ATV por la selva"
+                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                 loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+            <span class="absolute bottom-3 left-4 text-xs font-bold text-white/80 uppercase tracking-widest">Aventura terrestre</span>
+          </div>
+          <div class="p-7 flex flex-col flex-1">
+            <h3 class="font-bold text-xl text-forest mb-2">Recorrido en ATV</h3>
+            <p class="text-dark/60 text-sm leading-relaxed">
+              Explora caminos de selva a bordo de cuatrimotos mientras recorres senderos naturales guiados por expertos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 — Tirolesas -->
+        <div class="bg-white rounded-3xl overflow-hidden card-hover shadow-md reveal flex flex-col" style="transition-delay:0.1s">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.pexels.com/photos/6454835/pexels-photo-6454835.jpeg"
+                 alt="Tirolesas sobre la selva"
+                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                 loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+            <span class="absolute bottom-3 left-4 text-xs font-bold text-white/80 uppercase tracking-widest">Aventura aérea</span>
+          </div>
+          <div class="p-7 flex flex-col flex-1">
+            <h3 class="font-bold text-xl text-forest mb-2">Tirolesas</h3>
+            <p class="text-dark/60 text-sm leading-relaxed">
+              Deslízate sobre la selva y vive una experiencia llena de adrenalina con vistas espectaculares.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 — Cenotes -->
+        <div class="bg-white rounded-3xl overflow-hidden card-hover shadow-md reveal flex flex-col" style="transition-delay:0.2s">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.pexels.com/photos/12259620/pexels-photo-12259620.jpeg"
+                 alt="Nado en cenote de aguas cristalinas"
+                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                 loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+            <span class="absolute bottom-3 left-4 text-xs font-bold text-white/80 uppercase tracking-widest">Maravilla natural</span>
+          </div>
+          <div class="p-7 flex flex-col flex-1">
+            <h3 class="font-bold text-xl text-forest mb-2">Exploración de cenotes</h3>
+            <p class="text-dark/60 text-sm leading-relaxed">
+              Visita un cenote seco y nada en dos cenotes tipo caverna de aguas cristalinas.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       3 · EXPERIENCE SECTION  (3-step journey)
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <section id="experience" class="bg-white py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Heading -->
+      <div class="text-center mb-16 reveal">
+        <span class="text-leaf text-sm font-semibold tracking-widest uppercase">Tu recorrido</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-forest mt-3">
+          Cómo se desarrolla la aventura
+        </h2>
+        <p class="text-dark/60 mt-4 max-w-xl mx-auto">
+          Vive una emocionante experiencia que te lleva a recorrer la selva, descubrir impresionantes cenotes y disfrutar de actividades llenas de adrenalina en plena naturaleza.
+        </p>
+      </div>
+
+      <!-- Steps -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Step 1 -->
+        <div class="relative flex md:flex-col items-start md:items-center text-left md:text-center gap-5 reveal step-connector">
+          <div class="flex-shrink-0 w-14 h-14 bg-forest text-white rounded-2xl flex items-center justify-center text-2xl shadow-lg z-10">
+            🌿
+          </div>
+          <div>
+            <span class="text-xs font-bold text-leaf uppercase tracking-widest">Paso 01</span>
+            <h3 class="font-bold text-xl text-forest mt-1 mb-2">Explora la selva</h3>
+            <p class="text-dark/60 text-sm leading-relaxed">
+              Súbete a una cuatrimoto y recorre emocionantes senderos de selva, rodeado de naturaleza, y vive la adrenalina al deslizarte en nuestras tirolesas sobre el paisaje selvático.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative flex md:flex-col items-start md:items-center text-left md:text-center gap-5 reveal step-connector" style="transition-delay:0.15s">
+          <div class="flex-shrink-0 w-14 h-14 bg-forest text-white rounded-2xl flex items-center justify-center text-2xl shadow-lg z-10">
+            💧
+          </div>
+          <div>
+            <span class="text-xs font-bold text-leaf uppercase tracking-widest">Paso 02</span>
+            <h3 class="font-bold text-xl text-forest mt-1 mb-2">Descubre cenotes escondidos</h3>
+            <p class="text-dark/60 text-sm leading-relaxed">
+              Descubre nuestro cenote privado y disfruta nadando en sus aguas turquesa cristalinas, con una temperatura ideal durante todo el año.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative flex md:flex-col items-start md:items-center text-left md:text-center gap-5 reveal" style="transition-delay:0.3s">
+          <div class="flex-shrink-0 w-14 h-14 bg-forest text-white rounded-2xl flex items-center justify-center text-2xl shadow-lg z-10">
+            🌺
+          </div>
+          <div>
+            <span class="text-xs font-bold text-leaf uppercase tracking-widest">Paso 03</span>
+            <h3 class="font-bold text-xl text-forest mt-1 mb-2">Vive la cultura maya auténtica</h3>
+            <p class="text-dark/60 text-sm leading-relaxed">
+              Cierra tu aventura con una degustación de tequila y disfruta de deliciosa comida regional recién preparada, donde podrás probar auténticos sabores tradicionales de la región.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       4 · ACTIVITIES SECTION  (image grid)
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <section id="activities" class="bg-sand py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Heading -->
+      <div class="text-center mb-14 reveal">
+        <span class="text-leaf text-sm font-semibold tracking-widest uppercase">Todo incluido</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-forest mt-3">
+          7+ Actividades, un solo boleto
+        </h2>
+        <p class="text-dark/60 mt-4 max-w-xl mx-auto">
+          Cada actividad es guiada por profesionales certificados para que solo te enfoques en la aventura.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- ATV -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-md card-hover reveal">
+          <div class="gallery-img h-52">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
+                 alt="ATV ride through jungle"
+                 class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl">🏍️</span>
+              <h3 class="font-bold text-lg text-forest">Recorrido en ATV</h3>
+            </div>
+            <p class="text-dark/60 text-sm leading-relaxed">
+              Explora caminos de selva a bordo de cuatrimotos mientras recorres senderos naturales guiados por expertos.
+            </p>
+            <span class="inline-block mt-3 text-xs font-semibold text-leaf bg-leaf/10 px-3 py-1 rounded-full">
+              ✓ Casco y equipo incluidos
+            </span>
+          </div>
+        </div>
+
+        <!-- Zipline -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-md card-hover reveal" style="transition-delay:0.1s">
+          <div class="gallery-img h-52">
+            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=700&q=80"
+                 alt="Zipline above jungle canopy"
+                 class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl">🪂</span>
+              <h3 class="font-bold text-lg text-forest">Tirolesas</h3>
+            </div>
+            <p class="text-dark/60 text-sm leading-relaxed">
+              Deslízate sobre la selva y vive una experiencia llena de adrenalina en nuestras tirolesas profesionales.
+            </p>
+            <span class="inline-block mt-3 text-xs font-semibold text-leaf bg-leaf/10 px-3 py-1 rounded-full">
+              ✓ Arnes completo y revisión de seguridad
+            </span>
+          </div>
+        </div>
+
+        <!-- Cenotes -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-md card-hover reveal" style="transition-delay:0.2s">
+          <div class="gallery-img h-52">
+            <img src="https://images.pexels.com/photos/13783987/pexels-photo-13783987.jpeg"
+                 alt="Crystal clear cenote"
+                 class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl">🏊</span>
+              <h3 class="font-bold text-lg text-forest">Exploración de cenotes</h3>
+            </div>
+            <p class="text-dark/60 text-sm leading-relaxed">
+              Visita un cenote seco y nada en dos cenotes tipo caverna de aguas cristalinas durante todo el año.
+            </p>
+            <span class="inline-block mt-3 text-xs font-semibold text-leaf bg-leaf/10 px-3 py-1 rounded-full">
+              ✓ Chalecos salvavidas incluidos
+            </span>
+          </div>
+        </div>
+
+        <!-- Hanging Bridges -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-md card-hover reveal" style="transition-delay:0.1s">
+          <div class="gallery-img h-52">
+            <img src="https://images.pexels.com/photos/29438748/pexels-photo-29438748.jpeg"
+                 alt="Hanging bridge in jungle"
+                 class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl">🌉</span>
+              <h3 class="font-bold text-lg text-forest">Naturaleza</h3>
+            </div>
+            <p class="text-dark/60 text-sm leading-relaxed">
+             Sumérgete en la belleza de la selva y disfruta de un entorno natural único rodeado de vegetación y paisajes impresionantes.
+            </p>
+            <span class="inline-block mt-3 text-xs font-semibold text-leaf bg-leaf/10 px-3 py-1 rounded-full">
+              ✓ Experiencia en plena naturaleza
+            </span>
+          </div>
+        </div>
+
+        <!-- Mayan Ritual -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-md card-hover reveal" style="transition-delay:0.2s">
+          <div class="gallery-img h-52">
+            <img src="https://images.pexels.com/photos/32695530/pexels-photo-32695530.jpeg"
+                 alt="Mayan ritual ceremony"
+                 class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl">🪬</span>
+              <h3 class="font-bold text-lg text-forest">Áreas de descanso</h3>
+            </div>
+            <p class="text-dark/60 text-sm leading-relaxed">
+              Disfruta de espacios tranquilos rodeados de naturaleza donde podrás relajarte y disfrutar del entorno después de cada actividad.
+            </p>
+            <span class="inline-block mt-3 text-xs font-semibold text-leaf bg-leaf/10 px-3 py-1 rounded-full">
+              ✓ Zonas de descanso en plena naturaleza
+            </span>
+          </div>
+        </div>
+
+        <!-- Tequila + Tacos -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-md card-hover reveal" style="transition-delay:0.3s">
+          <div class="gallery-img h-52">
+            <img src="https://images.pexels.com/photos/28791739/pexels-photo-28791739.jpeg"
+                 alt="Tequila tasting and regional tacos"
+                 class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl">🌮</span>
+              <h3 class="font-bold text-lg text-forest">Comida tradicional</h3>
+            </div>
+            <p class="text-dark/60 text-sm leading-relaxed">
+                Cierra tu aventura con una degustación de tequila y deliciosa comida regional recién preparada con sabores auténticos de la región.
+            </p>
+            <span class="inline-block mt-3 text-xs font-semibold text-leaf bg-leaf/10 px-3 py-1 rounded-full">
+              ✓ Incluido en todos los paquetes
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       5 · GALLERY SECTION
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <section id="gallery" class="bg-white py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Heading -->
+      <div class="text-center mb-14 reveal">
+        <span class="text-leaf text-sm font-semibold tracking-widest uppercase">Galería de fotos</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-forest mt-3">
+          Verlo es creerlo
+        </h2>
+        <p class="text-dark/60 mt-4 max-w-xl mx-auto">
+          Aventuras reales de huéspedes reales. Cada visita crea recuerdos que duran toda la vida.
+        </p>
+      </div>
+
+      <!--
+        Editorial grid — 4 cols desktop / 2 cols tablet+mobile
+        auto-rows: 190px  →  2×2 featured cells = ~388px tall
+        Layout (desktop):
+          Row 1-2: [feat A 2×2] [img2] [img3]
+                   [          ] [img4] [img5]
+          Row 3-4: [img6] [img7] [feat B 2×2]
+                   [img8] [img9] [           ]
+          Row 5  : [img10 wide 2] [img11 wide 2]
+          (img12 placed as extra wide bottom strip, col-span-4)
+        On tablet/mobile: all cells become 1-col → clean 2-col grid
+      -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 auto-rows-[190px] reveal">
+
+        <!-- ① FEATURED LEFT — 2 cols × 2 rows -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1 md:col-span-2 row-span-1 md:row-span-2">
+          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80"
+               alt="Aventura en la selva maya" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- ② -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1">
+          <img src="https://images.unsplash.com/photo-1614743481078-d3ef32c72bba?w=600&q=80"
+               alt="ATV en la jungla" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- ③ -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1">
+          <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=600&q=80"
+               alt="Tirolesa sobre el bosque" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- ④ — fills row 2 right side (desktop only) -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1">
+          <img src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=600&q=80"
+               alt="Nado en cenote" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- ⑤ -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80"
+               alt="Grupo de aventureros" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- ⑥ -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1">
+          <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=600&q=80"
+               alt="Selva tropical densa" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- ⑦ -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1">
+          <img src="https://images.unsplash.com/photo-1501554728187-ce583db33af7?w=600&q=80"
+               alt="Tirolesa entre árboles" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- ⑧ FEATURED RIGHT — 2 cols × 2 rows -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1 md:col-span-2 row-span-1 md:row-span-2">
+          <img src="https://images.unsplash.com/photo-1506377872008-6645d9d29ef7?w=800&q=80"
+               alt="Vista aérea de la jungla al atardecer" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- ⑨ — fills row 4 left side (desktop) -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1">
+          <img src="https://images.unsplash.com/photo-1518116589359-6f126c359c1d?w=600&q=80"
+               alt="Recorrido en ATV" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- ⑩ -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1">
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?w=600&q=80"
+               alt="Naturaleza tropical" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+        <!-- ⑪ WIDE BOTTOM-LEFT — 2 cols -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1 md:col-span-2">
+          <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=800&q=80"
+               alt="Nado con tortugas en Akumal" class="w-full h-full object-cover object-top" loading="lazy" />
+        </div>
+
+        <!-- ⑫ WIDE BOTTOM-RIGHT — 2 cols -->
+        <div class="gallery-img rounded-2xl overflow-hidden col-span-1 md:col-span-2">
+          <img src="https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?w=800&q=80"
+               alt="Cenote de aguas cristalinas" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       7 · PACKAGES SECTION
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <section id="packages" class="bg-sand py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Heading -->
+      <div class="text-center mb-14 reveal">
+        <span class="text-leaf text-sm font-semibold tracking-widest uppercase">Todo incluido</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-forest mt-3">
+          Paquetes de Aventura
+        </h2>
+        <p class="text-dark/60 mt-4 max-w-xl mx-auto">
+          Elige la experiencia perfecta para vivir la aventura en Balamche Park.
+        </p>
+      </div>
+
+      <!-- Cards grid: 1 col / 2 col (md) / 3 col (lg) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- ── Paquete 1: Aventura Completa ── -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-sand/80 flex flex-col group transition-all duration-300 hover:scale-105 hover:shadow-2xl reveal">
+          <div class="relative overflow-hidden h-48">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
+                 alt="Aventura Completa – ATV, tirolesas y cenotes"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/70 to-transparent"></div>
+            <span class="absolute top-3 right-3 bg-leaf text-white text-xs font-bold px-3 py-1 rounded-full tracking-wide">⭐ Más popular</span>
+            <h3 class="absolute bottom-3 left-4 font-display text-white text-xl font-bold drop-shadow-lg">Aventura Completa</h3>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <ul class="space-y-2 text-dark/70 text-sm flex-1 mb-6">
+              <li class="flex items-center gap-2"><span>🏍️</span> ATV's</li>
+              <li class="flex items-center gap-2"><span>🪂</span> Tirolesas</li>
+              <li class="flex items-center gap-2"><span>💧</span> Cenotes</li>
+              <li class="flex items-center gap-2"><span>🥃</span> Degustación de tequila</li>
+              <li class="flex items-center gap-2"><span>🍽️</span> Comida tradicional</li>
+              <li class="flex items-center gap-2"><span>🚌</span> Transporte redondo</li>
+            </ul>
+            <div class="border-t border-sand pt-5">
+              <div class="flex items-baseline gap-1 mb-4">
+                <span class="text-4xl font-bold text-forest">$85</span>
+                <span class="text-dark/50 text-sm font-medium">USD / persona</span>
+              </div>
+              <a href="https://wa.me/529871073493?text=Hola!%20Me%20interesa%20el%20Paquete%20Aventura%20Completa%20(%2485%20USD)"
+                 target="_blank" rel="noopener"
+                 class="w-full inline-flex items-center justify-center gap-2 bg-forest text-white font-semibold py-3 rounded-2xl hover:bg-leaf transition-colors text-sm">
+                <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Reservar ahora
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Paquete 2: ATV + Cenotes ── -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-sand/80 flex flex-col group transition-all duration-300 hover:scale-105 hover:shadow-2xl reveal" style="transition-delay:0.08s">
+          <div class="relative overflow-hidden h-48">
+            <img src="https://images.unsplash.com/photo-1518116589359-6f126c359c1d?w=700&q=80"
+                 alt="ATV y Cenotes en Balamche Park"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/70 to-transparent"></div>
+            <h3 class="absolute bottom-3 left-4 font-display text-white text-xl font-bold drop-shadow-lg">ATV + Cenotes</h3>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <ul class="space-y-2 text-dark/70 text-sm flex-1 mb-6">
+              <li class="flex items-center gap-2"><span>🏍️</span> ATV's</li>
+              <li class="flex items-center gap-2"><span>💧</span> Cenotes</li>
+              <li class="flex items-center gap-2"><span>🥃</span> Degustación de tequila</li>
+              <li class="flex items-center gap-2"><span>🍽️</span> Comida tradicional</li>
+              <li class="flex items-center gap-2"><span>🚌</span> Transporte redondo</li>
+            </ul>
+            <div class="border-t border-sand pt-5">
+              <div class="flex items-baseline gap-1 mb-4">
+                <span class="text-4xl font-bold text-forest">$70</span>
+                <span class="text-dark/50 text-sm font-medium">USD / persona</span>
+              </div>
+              <a href="https://wa.me/529871073493?text=Hola!%20Me%20interesa%20el%20Paquete%20ATV%20%2B%20Cenotes%20(%2470%20USD)"
+                 target="_blank" rel="noopener"
+                 class="w-full inline-flex items-center justify-center gap-2 bg-forest text-white font-semibold py-3 rounded-2xl hover:bg-leaf transition-colors text-sm">
+                <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Reservar ahora
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Paquete 3: Tirolesas + Cenotes ── -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-sand/80 flex flex-col group transition-all duration-300 hover:scale-105 hover:shadow-2xl reveal" style="transition-delay:0.16s">
+          <div class="relative overflow-hidden h-48">
+            <img src="https://images.unsplash.com/photo-1501554728187-ce583db33af7?w=700&q=80"
+                 alt="Tirolesas y Cenotes en Balamche Park"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/70 to-transparent"></div>
+            <h3 class="absolute bottom-3 left-4 font-display text-white text-xl font-bold drop-shadow-lg">Tirolesas + Cenotes</h3>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <ul class="space-y-2 text-dark/70 text-sm flex-1 mb-6">
+              <li class="flex items-center gap-2"><span>🪂</span> Tirolesas</li>
+              <li class="flex items-center gap-2"><span>💧</span> Cenotes</li>
+              <li class="flex items-center gap-2"><span>🥃</span> Degustación de tequila</li>
+              <li class="flex items-center gap-2"><span>🍽️</span> Comida tradicional</li>
+              <li class="flex items-center gap-2"><span>🚌</span> Transporte redondo</li>
+            </ul>
+            <div class="border-t border-sand pt-5">
+              <div class="flex items-baseline gap-1 mb-4">
+                <span class="text-4xl font-bold text-forest">$65</span>
+                <span class="text-dark/50 text-sm font-medium">USD / persona</span>
+              </div>
+              <a href="https://wa.me/529871073493?text=Hola!%20Me%20interesa%20el%20Paquete%20Tirolesas%20%2B%20Cenotes%20(%2465%20USD)"
+                 target="_blank" rel="noopener"
+                 class="w-full inline-flex items-center justify-center gap-2 bg-forest text-white font-semibold py-3 rounded-2xl hover:bg-leaf transition-colors text-sm">
+                <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Reservar ahora
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Paquete 4: Aventura + Tortugas en Akumal ── -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-sand/80 flex flex-col group transition-all duration-300 hover:scale-105 hover:shadow-2xl reveal" style="transition-delay:0.0s">
+          <div class="relative overflow-hidden h-48">
+            <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=700&q=80"
+                 alt="Nado con tortugas en Akumal y ATV"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/70 to-transparent"></div>
+            <span class="absolute top-3 right-3 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full tracking-wide">🐢 Exclusivo</span>
+            <h3 class="absolute bottom-3 left-4 font-display text-white text-xl font-bold drop-shadow-lg">Aventura + Tortugas</h3>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <ul class="space-y-2 text-dark/70 text-sm flex-1 mb-6">
+              <li class="flex items-center gap-2"><span>🐢</span> Nado con tortugas en Akumal</li>
+              <li class="flex items-center gap-2"><span>🏍️</span> ATV's</li>
+              <li class="flex items-center gap-2"><span>💧</span> Cenotes</li>
+              <li class="flex items-center gap-2"><span>🥃</span> Degustación de tequila</li>
+              <li class="flex items-center gap-2"><span>🍽️</span> Comida tradicional</li>
+              <li class="flex items-center gap-2"><span>🚌</span> Transporte redondo</li>
+            </ul>
+            <div class="border-t border-sand pt-5">
+              <div class="flex items-baseline gap-1 mb-4">
+                <span class="text-4xl font-bold text-forest">$120</span>
+                <span class="text-dark/50 text-sm font-medium">USD / persona</span>
+              </div>
+              <a href="https://wa.me/529871073493?text=Hola!%20Me%20interesa%20el%20Paquete%20Aventura%20%2B%20Tortugas%20en%20Akumal%20(%24120%20USD)"
+                 target="_blank" rel="noopener"
+                 class="w-full inline-flex items-center justify-center gap-2 bg-forest text-white font-semibold py-3 rounded-2xl hover:bg-leaf transition-colors text-sm">
+                <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Reservar ahora
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Paquete 5: ATV + Cenotes + Tirolesas ── -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-sand/80 flex flex-col group transition-all duration-300 hover:scale-105 hover:shadow-2xl reveal" style="transition-delay:0.08s">
+          <div class="relative overflow-hidden h-48">
+            <img src="https://images.unsplash.com/photo-1594128601690-f4d380a4cabc?w=700&q=80"
+                 alt="ATV, Cenotes y Tirolesas en la selva"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/70 to-transparent"></div>
+            <span class="absolute top-3 right-3 bg-leaf/90 text-white text-xs font-bold px-3 py-1 rounded-full tracking-wide">💰 Mejor precio</span>
+            <h3 class="absolute bottom-3 left-4 font-display text-white text-xl font-bold drop-shadow-lg">ATV + Cenotes + Tirolesas</h3>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <ul class="space-y-2 text-dark/70 text-sm flex-1 mb-6">
+              <li class="flex items-center gap-2"><span>🏍️</span> ATV's</li>
+              <li class="flex items-center gap-2"><span>💧</span> Cenotes</li>
+              <li class="flex items-center gap-2"><span>🪂</span> Tirolesas</li>
+              <li class="flex items-center gap-2"><span>🍽️</span> Comida tradicional</li>
+            </ul>
+            <div class="border-t border-sand pt-5">
+              <div class="flex items-baseline gap-1 mb-4">
+                <span class="text-4xl font-bold text-forest">$55</span>
+                <span class="text-dark/50 text-sm font-medium">USD / persona</span>
+              </div>
+              <a href="https://wa.me/529871073493?text=Hola!%20Me%20interesa%20el%20Paquete%20ATV%20%2B%20Cenotes%20%2B%20Tirolesas%20(%2455%20USD)"
+                 target="_blank" rel="noopener"
+                 class="w-full inline-flex items-center justify-center gap-2 bg-forest text-white font-semibold py-3 rounded-2xl hover:bg-leaf transition-colors text-sm">
+                <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Reservar ahora
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Paquete 6: Cenotes + Tirolesas ── -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-sand/80 flex flex-col group transition-all duration-300 hover:scale-105 hover:shadow-2xl reveal" style="transition-delay:0.16s">
+          <div class="relative overflow-hidden h-48">
+            <img src="https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?w=700&q=80"
+                 alt="Cenotes y Tirolesas en Balamche Park"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/70 to-transparent"></div>
+            <h3 class="absolute bottom-3 left-4 font-display text-white text-xl font-bold drop-shadow-lg">Cenotes + Tirolesas</h3>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <ul class="space-y-2 text-dark/70 text-sm flex-1 mb-6">
+              <li class="flex items-center gap-2"><span>💧</span> Cenotes</li>
+              <li class="flex items-center gap-2"><span>🪂</span> Tirolesas</li>
+              <li class="flex items-center gap-2"><span>🍽️</span> Comida tradicional</li>
+            </ul>
+            <div class="border-t border-sand pt-5">
+              <div class="flex items-baseline gap-1 mb-4">
+                <span class="text-4xl font-bold text-forest">$50</span>
+                <span class="text-dark/50 text-sm font-medium">USD / persona</span>
+              </div>
+              <a href="https://wa.me/529871073493?text=Hola!%20Me%20interesa%20el%20Paquete%20Cenotes%20%2B%20Tirolesas%20(%2450%20USD)"
+                 target="_blank" rel="noopener"
+                 class="w-full inline-flex items-center justify-center gap-2 bg-forest text-white font-semibold py-3 rounded-2xl hover:bg-leaf transition-colors text-sm">
+                <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Reservar ahora
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /grid -->
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       8 · TESTIMONIALS SECTION
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <section id="testimonials" class="bg-white py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Heading -->
+      <div class="text-center mb-14 reveal">
+        <span class="text-leaf text-sm font-semibold tracking-widest uppercase">Opiniones de viajeros</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-forest mt-3">
+          Lo que dicen nuestros visitantes
+        </h2>
+        <p class="text-dark/60 mt-4 max-w-xl mx-auto">
+          Más de 5,000 aventureros han descubierto Balamche Park. Esto es lo que comparten.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+
+        <!-- Review 1 -->
+        <div class="bg-sand rounded-3xl p-7 card-hover shadow-sm reveal">
+          <div class="flex items-center gap-1 mb-4 text-yellow-400 text-lg">★★★★★</div>
+          <p class="text-dark/70 text-sm leading-relaxed mb-6">
+            "Absolutely the best experience of my Cancún trip. The cenote was breathtaking — completely hidden and crystal clear. The Mayan ritual genuinely moved me. 10/10 recommend!"
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-forest flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+              SL
+            </div>
+            <div>
+              <p class="font-semibold text-sm text-dark">Sarah L.</p>
+              <p class="text-dark/40 text-xs">🇺🇸 Chicago, USA · January 2026</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-sand rounded-3xl p-7 card-hover shadow-sm reveal" style="transition-delay:0.15s">
+          <div class="flex items-center gap-1 mb-4 text-yellow-400 text-lg">★★★★★</div>
+          <p class="text-dark/70 text-sm leading-relaxed mb-6">
+            "¡Increíble experiencia! El recorrido en ATV por la selva fue emocionante y el personal super profesional. Los tacos y el tequila al final fueron el broche de oro. ¡Volveremos!"
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-leaf flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+              MG
+            </div>
+            <div>
+              <p class="font-semibold text-sm text-dark">Miguel G.</p>
+              <p class="text-dark/40 text-xs">🇲🇽 Ciudad de México · February 2026</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-sand rounded-3xl p-7 card-hover shadow-sm reveal" style="transition-delay:0.3s">
+          <div class="flex items-center gap-1 mb-4 text-yellow-400 text-lg">★★★★★</div>
+          <p class="text-dark/70 text-sm leading-relaxed mb-6">
+            "We booked the private experience for our family of 6 and it was worth every penny. Safety was top-notch, the guides were brilliant and the kids haven't stopped talking about it!"
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-forest flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+              TR
+            </div>
+            <div>
+              <p class="font-semibold text-sm text-dark">Tom R.</p>
+              <p class="text-dark/40 text-xs">🇬🇧 London, UK · March 2026</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap justify-center gap-6 mt-12 reveal">
+        <div class="flex items-center gap-2 bg-sand rounded-full px-5 py-2.5 text-sm font-medium text-dark/70">
+          <span class="text-base">🏅</span> TripAdvisor Traveler's Choice 2025
+        </div>
+        <div class="flex items-center gap-2 bg-sand rounded-full px-5 py-2.5 text-sm font-medium text-dark/70">
+          <span class="text-base">⭐</span> 4.9 / 5 en Google Reviews
+        </div>
+        <div class="flex items-center gap-2 bg-sand rounded-full px-5 py-2.5 text-sm font-medium text-dark/70">
+          <span class="text-base">🛡️</span> Operador de Ecoturismo Certificado
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       10 · FINAL CTA SECTION
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <section id="cta"
+           class="relative py-24 px-6 text-center overflow-hidden"
+           style="background-image: linear-gradient(135deg, rgba(31,77,43,0.95) 0%, rgba(26,26,26,0.9) 100%),
+                  url('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1600&q=80');
+                  background-size: cover; background-position: center;">
+
+    <div class="max-w-3xl mx-auto relative z-10 reveal">
+      <span class="text-5xl block mb-6">🌴</span>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+        ¿Listo para vivir una<br/>
+        <span class="text-leaf">aventura en la selva maya?</span>
+      </h2>
+      <p class="text-white/70 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
+        Reserva tu experiencia en Balamche Park y descubre cenotes, adrenalina y cultura maya en un solo lugar.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#pricing"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-leaf text-white font-bold text-lg px-10 py-4 rounded-full hover:bg-green-600 transition-all shadow-xl hover:-translate-y-1">
+          🎯 Reservar ahora
+        </a>
+        <a href="https://wa.me/529871073493?text=¡Hola!%20Quiero%20más%20información%20sobre%20Balamche%20Park"
+           target="_blank" rel="noopener"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 border-2 border-white/30 text-white font-bold text-lg px-10 py-4 rounded-full hover:bg-white/20 transition-all backdrop-blur-sm wa-pulse">
+          <svg class="w-6 h-6 fill-current text-green-400" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Contactar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Decorative circles -->
+    <div class="absolute -top-20 -left-20 w-72 h-72 bg-leaf/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-forest/30 rounded-full blur-3xl pointer-events-none"></div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       11 · FOOTER
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <footer class="bg-dark text-white">
+
+    <!-- Main footer -->
+    <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🌿</span>
+          <span class="font-display text-xl font-bold">Balamche<span class="text-leaf">Park</span></span>
+        </div>
+        <p class="text-white/50 text-sm leading-relaxed mb-5">
+          La aventura definitiva en la selva maya. Cuatrimotos, tirolesas, cenotes y cultura auténtica en 3 horas y 30 minutos.
+        </p>
+        <!-- Social icons -->
+        <div class="flex items-center gap-3">
+          <a href="#" aria-label="Instagram"
+             class="w-9 h-9 bg-white/10 rounded-full grid place-items-center hover:bg-leaf transition-colors">
+            <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook"
+             class="w-9 h-9 bg-white/10 rounded-full grid place-items-center hover:bg-leaf transition-colors">
+            <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok"
+             class="w-9 h-9 bg-white/10 rounded-full grid place-items-center hover:bg-leaf transition-colors">
+            <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="https://wa.me/529871073493" aria-label="WhatsApp" target="_blank" rel="noopener"
+             class="w-9 h-9 bg-white/10 rounded-full grid place-items-center hover:bg-leaf transition-colors">
+            <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-semibold text-sm uppercase tracking-widest text-white/50 mb-5">Enlaces rápidos</h4>
+        <ul class="space-y-3 text-sm text-white/70">
+          <li><a href="#features"     class="hover:text-leaf transition-colors">Actividades</a></li>
+          <li><a href="#experience"   class="hover:text-leaf transition-colors">Cómo funciona</a></li>
+          <li><a href="#gallery"      class="hover:text-leaf transition-colors">Galería</a></li>
+          <li><a href="#pricing"      class="hover:text-leaf transition-colors">Precios</a></li>
+          <li><a href="#testimonials" class="hover:text-leaf transition-colors">Reseñas</a></li>
+          <li><a href="#"             class="hover:text-leaf transition-colors">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-semibold text-sm uppercase tracking-widest text-white/50 mb-5">Contacto</h4>
+        <ul class="space-y-4 text-sm text-white/70">
+          <li class="flex items-start gap-2">
+            <span class="text-leaf mt-0.5">📍</span>
+            <span>Yodzonot, 77776 Akumal, Q.R.</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-leaf">📞</span>
+            <a href="tel:+529842058230" class="hover:text-leaf transition-colors">984 205 8230</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-leaf">✉️</span>
+            <a href="mailto:info@balamchepark.mx" class="hover:text-leaf transition-colors">info@balamchepark.mx</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-leaf mt-0.5">🕐</span>
+            <span>Lun–Dom: 9:00 AM – 6:00 PM</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Location / Map CTA -->
+      <div>
+        <h4 class="font-semibold text-sm uppercase tracking-widest text-white/50 mb-5">Ubicación</h4>
+        <div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10 mb-4">
+          <div class="h-36 bg-forest/50 flex items-center justify-center text-5xl">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.682576483248!2d-87.315901!3d20.395973599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e33007d64045b%3A0x45cca86cece2cad3!2sBalamche!5e0!3m2!1ses-419!2smx!4v1772771248057!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/3vDTm2zpJKE4xyvH7" target="_blank" rel="noopener"
+           class="block text-center text-sm font-semibold border border-white/20 text-white/70 py-2.5 rounded-xl hover:bg-white/10 hover:text-white transition-colors">
+          Abrir en Google Maps →
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/30">
+        <p>© 2026 Balamche Park. Todos los derechos reservados.</p>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-white transition-colors">Política de privacidad</a>
+          <a href="#" class="hover:text-white transition-colors">Términos y condiciones</a>
+          <a href="#" class="hover:text-white transition-colors">Mapa del sitio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       FLOATING WHATSAPP BUTTON
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/529871073493?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20Balamche%20Park"
+     target="_blank" rel="noopener" aria-label="Chatear por WhatsApp"
+     class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-leaf rounded-full shadow-xl flex items-center justify-center wa-pulse hover:bg-green-600 transition-colors">
+    <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       EXTERNAL JAVASCRIPT
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <script src="./js/main.js" defer></script>
+
+  <!-- All JavaScript logic has been moved to js/main.js -->
+
+</body>
+</html>
